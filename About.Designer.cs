@@ -38,7 +38,8 @@ namespace LiteSurf
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "./logols.png";
+            this.pictureBox1.Image = global::LiteSurf.Properties.Resources.logolsnogradient;
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(26, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(175, 175);
@@ -63,7 +64,7 @@ namespace LiteSurf
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Version v1.0";
+            this.label2.Text = "Version v1.1";
             // 
             // About
             // 
