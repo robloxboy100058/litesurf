@@ -10,3 +10,5 @@
 <p>ProtoWeb</p>
 <hr>
 i dont know what else to add here.
+<img src="https://github.com/robloxboy100058/rb1000/blob/main/litesurf%20on%20win98.PNG?raw=true">
+Windows 98 compatible!
