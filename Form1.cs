@@ -14,6 +14,12 @@ namespace LiteSurf
         {
             InitializeComponent();
             webBrowser1.Navigate("https://rb1000.vercel.app/litesurf/");
+            webBrowser1.StatusTextChanged += WebBrowser1_StatusTextChanged;
+        }
+
+        private void WebBrowser1_StatusTextChanged(object sender, EventArgs e)
+        {
+            labelTitle.Text = webBrowser1.StatusText;
         }
 
         private void urlTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -39,23 +45,22 @@ namespace LiteSurf
             webBrowser1.GoBack();
         }
 
-        private void webBrowser1_FileDownload(object sender, EventArgs e)
-        {
-            Console.WriteLine("You are in the WebBrowser.FileDownload event.");
-        }
-
         private void webBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             urlTextBox.Text = webBrowser1.Url.ToString();
             string pageTitle = webBrowser1.DocumentTitle;
-            string currentUrl = e.Url.ToString();
+
             if (!string.IsNullOrEmpty(pageTitle))
             {
-                labelTitle.Text = pageTitle;
+                
+                string formTitle = pageTitle + " - LiteSurf";
+                Text = formTitle;
             }
             else
             {
-                labelTitle.Text = currentUrl;
+                string formURL = "Title Unavailable" + " - LiteSurf";
+                Text = formURL;
+                
             }
         }
 
@@ -82,6 +87,36 @@ namespace LiteSurf
         {
             About about = new About();
             about.ShowDialog();
+        }
+
+        private void googleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://google.com");
+        }
+
+        private void wttrinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://wttr.in");
+        }
+
+        private void cNNLiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://lite.cnn.com/en");
+        }
+
+        private void riiConnect24BookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://bookmark.rc24.xyz");
+        }
+
+        private void wiiNetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://wiinet.xyz");
+        }
+
+        private void frogFindToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Navigate("http://frogfind.com");
         }
     }
 }

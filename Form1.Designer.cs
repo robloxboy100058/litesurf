@@ -34,6 +34,13 @@ namespace LiteSurf
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sitesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.googleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wttrinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cNNLiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.riiConnect24BookmarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wiiNetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frogFindToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.labelTitle = new System.Windows.Forms.ToolStripStatusLabel();
             this.loadProgress = new System.Windows.Forms.ToolStripProgressBar();
@@ -42,6 +49,8 @@ namespace LiteSurf
             this.btnFwd = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutLiteSurfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,19 +60,20 @@ namespace LiteSurf
             this.webBrowser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.webBrowser1.Location = new System.Drawing.Point(0, 53);
+            this.webBrowser1.Location = new System.Drawing.Point(-1, 53);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(624, 364);
             this.webBrowser1.TabIndex = 0;
-            this.webBrowser1.FileDownload += new System.EventHandler(this.webBrowser1_FileDownload);
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.webBrowser1_Navigated);
             this.webBrowser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.webBrowser1_ProgressChanged);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.sitesToolStripMenuItem,
             this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -73,16 +83,73 @@ namespace LiteSurf
             // 
             // aboutToolStripMenuItem
             // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutLiteSurfToolStripMenuItem});
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.aboutToolStripMenuItem.Text = "Help";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // sitesToolStripMenuItem
+            // 
+            this.sitesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.googleToolStripMenuItem,
+            this.wttrinToolStripMenuItem,
+            this.cNNLiteToolStripMenuItem,
+            this.riiConnect24BookmarksToolStripMenuItem,
+            this.wiiNetToolStripMenuItem,
+            this.frogFindToolStripMenuItem});
+            this.sitesToolStripMenuItem.Name = "sitesToolStripMenuItem";
+            this.sitesToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.sitesToolStripMenuItem.Text = "Sites";
+            // 
+            // googleToolStripMenuItem
+            // 
+            this.googleToolStripMenuItem.Name = "googleToolStripMenuItem";
+            this.googleToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.googleToolStripMenuItem.Text = "Google";
+            this.googleToolStripMenuItem.Click += new System.EventHandler(this.googleToolStripMenuItem_Click);
+            // 
+            // wttrinToolStripMenuItem
+            // 
+            this.wttrinToolStripMenuItem.Name = "wttrinToolStripMenuItem";
+            this.wttrinToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.wttrinToolStripMenuItem.Text = "wttr.in";
+            this.wttrinToolStripMenuItem.Click += new System.EventHandler(this.wttrinToolStripMenuItem_Click);
+            // 
+            // cNNLiteToolStripMenuItem
+            // 
+            this.cNNLiteToolStripMenuItem.Name = "cNNLiteToolStripMenuItem";
+            this.cNNLiteToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.cNNLiteToolStripMenuItem.Text = "CNN Lite";
+            this.cNNLiteToolStripMenuItem.Click += new System.EventHandler(this.cNNLiteToolStripMenuItem_Click);
+            // 
+            // riiConnect24BookmarksToolStripMenuItem
+            // 
+            this.riiConnect24BookmarksToolStripMenuItem.Name = "riiConnect24BookmarksToolStripMenuItem";
+            this.riiConnect24BookmarksToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.riiConnect24BookmarksToolStripMenuItem.Text = "RiiConnect24 Bookmarks";
+            this.riiConnect24BookmarksToolStripMenuItem.Click += new System.EventHandler(this.riiConnect24BookmarksToolStripMenuItem_Click);
+            // 
+            // wiiNetToolStripMenuItem
+            // 
+            this.wiiNetToolStripMenuItem.Name = "wiiNetToolStripMenuItem";
+            this.wiiNetToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.wiiNetToolStripMenuItem.Text = "WiiNet";
+            this.wiiNetToolStripMenuItem.Click += new System.EventHandler(this.wiiNetToolStripMenuItem_Click);
+            // 
+            // frogFindToolStripMenuItem
+            // 
+            this.frogFindToolStripMenuItem.Name = "frogFindToolStripMenuItem";
+            this.frogFindToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.frogFindToolStripMenuItem.Text = "FrogFind";
+            this.frogFindToolStripMenuItem.Click += new System.EventHandler(this.frogFindToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelTitle,
-            this.loadProgress});
+            this.loadProgress,
+            this.labelTitle});
             this.statusStrip1.Location = new System.Drawing.Point(0, 419);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(624, 22);
@@ -92,8 +159,8 @@ namespace LiteSurf
             // labelTitle
             // 
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(51, 17);
-            this.labelTitle.Text = "webTitle";
+            this.labelTitle.Size = new System.Drawing.Size(38, 17);
+            this.labelTitle.Text = "status";
             // 
             // loadProgress
             // 
@@ -145,6 +212,18 @@ namespace LiteSurf
             this.timer1.Interval = 600;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // aboutLiteSurfToolStripMenuItem
+            // 
+            this.aboutLiteSurfToolStripMenuItem.Name = "aboutLiteSurfToolStripMenuItem";
+            this.aboutLiteSurfToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutLiteSurfToolStripMenuItem.Text = "About LiteSurf";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +263,15 @@ namespace LiteSurf
         private System.Windows.Forms.Button btnFwd;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem sitesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem googleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wttrinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cNNLiteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem riiConnect24BookmarksToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wiiNetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem frogFindToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutLiteSurfToolStripMenuItem;
     }
 }
 
